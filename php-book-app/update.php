@@ -102,16 +102,16 @@ if (isset($_GET['id'])) {
       <form action="update.php?id=<?= $_GET['id'] ?>" method="post" class="registration-form">
         <div>
           <label for="book_code">書籍コード</label>
-          <input type="number" id="book_code" name="book_code" value="<?= $book['book_code'] ?>" min="0" max="1000000000" required>
+          <input type="number" id="book_code" name="book_code" value="<?= $book['book_code'] ?>" min="0" max="100000000" required>
 
           <label for="book_name">書籍名</label>
-          <input type="text" id="book_name" name="book_name" value="<?= $book['book_name'] ?>" min="0" max="1000000000" required>
+          <input type="text" id="book_name" name="book_name" value="<?= $book['book_name'] ?>" maxlength="50" required>
 
           <label for="price">単価</label>
-          <input type="number" id="price" name="price" value="<?= $book['price'] ?>" min="0" max="1000000000" required>
+          <input type="number" id="price" name="price" value="<?= $book['price'] ?>" min="0" max="100000000" required>
 
           <label for="stock_quantity">在庫数</label>
-          <input type="number" id="stock_quantity" name="stock_quantity" value="<?= $book['stock_quantity'] ?>" min="0" max="1000000000" required>
+          <input type="number" id="stock_quantity" name="stock_quantity" value="<?= $book['stock_quantity'] ?>" min="0" max="100000000" required>
 
           <label for="genre_code">ジャンルコード</label>
           <select name="genre_code" id="genre_code" required>

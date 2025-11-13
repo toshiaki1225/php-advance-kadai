@@ -86,7 +86,7 @@ try {
           <input type="number" id="book_code" name="book_code" min="0" max="100000000" required>
 
           <label for="book_name">書籍名</label>
-          <input type="text" id="book_name" name="book_name" min="0" max="100000000" required>
+          <input type="text" id="book_name" name="book_name" maxlength="50" required>
 
           <label for="price">単価</label>
           <input type="number" id="price" name="price" min="0" max="100000000" required>
