@@ -19,7 +19,7 @@ a, button {
   transition: 0.3s;
 }
 
-nav, a {
+nav a {
   margin-left:  0.75rem;
   color: #fff;
   text-decoration: none;

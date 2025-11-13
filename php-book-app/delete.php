@@ -1,5 +1,5 @@
 <?php 
-$dsn = 'mysql:dbname=php_book_app;hostname=loacalhost:charset=utf8mb4';
+$dsn = 'mysql:dbname=php_book_app;host=localhost;charset=utf8mb4';
 $user = 'root';
 $password = '';
 

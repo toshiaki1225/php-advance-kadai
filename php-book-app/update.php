@@ -55,7 +55,7 @@ if (isset($_GET['id'])) {
       exit('idパラメータの値が不正です。');
     }
 
-    $sql_select_genre_code = 'SELECT genre_code FROM books';
+    $sql_select_genre_code = 'SELECT genre_code FROM genres';
 
     $stmt_select_genre_code = $pdo->query($sql_select_genre_code);
     $genre_codes = $stmt_select_genre_code->fetchAll(PDO::FETCH_COLUMN);

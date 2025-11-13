@@ -21,9 +21,9 @@ try {
   }
 
   if ($order === 'desc') {
-    $sql_select = 'SELECT * FROM books WHERE book_name LIKE :keyword ORDER BY update_at DESC';
+    $sql_select = 'SELECT * FROM books WHERE book_name LIKE :keyword ORDER BY updated_at DESC';
   } else {
-    $sql_select = 'SELECT * FROM books WHERE book_name LIKE :keyword ORDER BY update_at ASC';
+    $sql_select = 'SELECT * FROM books WHERE book_name LIKE :keyword ORDER BY updated_at ASC';
   }
 
   $stmt_select = $pdo->prepare($sql_select);
@@ -81,10 +81,10 @@ try {
           </a>
           <form action="read.php" method="get" class="search-form">
             <input type="hidden" name="order" value="<?= $order ?>">
-            <input type="text" class="search-box" placeholder="商品名で検索" name="keyword" value="<?= $keyword ?>">
+            <input type="text" class="search-box" placeholder="書籍名で検索" name="keyword" value="<?= $keyword ?>">
           </form>
         </div>
-        <a href="create.php" class="btn">商品登録</a>
+        <a href="create.php" class="btn">書籍登録</a>
       </div>
       <table class="books-table">
         <tr>
@@ -99,7 +99,7 @@ try {
         <?php
         // 配列の中身を順番に取り出し表形式で出力する
         foreach ($books as $book) {
-          $tabel_row = "
+          $table_row = "
           <tr>
           <td>{$book['book_code']}</td>
           <td>{$book['book_name']}</td>
@@ -111,7 +111,7 @@ try {
           </tr>
           ";
 
-          echo $tabel_row;
+          echo $table_row;
         }
 
 
